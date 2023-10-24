@@ -28,4 +28,19 @@
 .btnCard button{
     padding: 20px;
     width: 200px;
+    font-weight: bold !important;
+}
+.suma {
+    background-color: yellow;
+}
+.resta {
+    background-color: blue;
+    color: white;
+}
+.multiplicacion {
+    background-color: #FF8585;
+    color: white;
+}
+.random {
+    background-color: #88DC65;;
 }
