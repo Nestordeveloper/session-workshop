@@ -1,0 +1,52 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+    int? randomNumber = Context.Session.GetInt32("RandomNumber");
+}
+<link rel="stylesheet" href="~/css/dashboardstyles.css">
+@model User;
+<div class="upsideBar">
+    <h1>Welcome @Context.Session.GetString("Name")!</h1>
+    <div class="btnLogout">
+        <form method="post" asp-action="Logout">
+            <button type="submit" name="logout" value="logout">Log Out</button>
+        </form>
+    </div>
+</div>
+<div class="randomNumber">
+    <h2>@Context.Session.GetInt32("RandomNumber")</h2>
+</div>
+
+<div class="containerContent">
+    <div class="row">
+        <div class="col-sm">
+            <div class="btnCard">
+                <form method="post" asp-action="Operacion">
+                    <button type="submit" name="operation" value="sumar">+1</button>
+                </form>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="btnCard">
+                <form method="post" asp-action="Operacion">
+                    <button type="submit" name="operation" value="restar">-1</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm">
+            <div class="btnCard">
+                <form method="post" asp-action="Operacion">
+                    <button type="submit" name="operation" value="multiplicar">x2</button>
+                </form>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="btnCard">
+                <form method="post" asp-action="Operacion">
+                    <button type="submit" name="operation" value="aleatorio">+ Random</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

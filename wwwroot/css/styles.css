@@ -1,0 +1,24 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container span {
+    margin-left: 10px;
+    position: fixed;
+    color: red;
+}
+.btnSubmit {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.btnSubmit button{
+    background-color: #88DC65;
+    box-shadow: 2px 2px 0px 0px rgba(0,0,0,1);
+    border: 1px solid black;
+}
